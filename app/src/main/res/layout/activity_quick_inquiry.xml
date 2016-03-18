@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.QuickInquiryActivity">
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/email_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/userName"/>
+
+    <EditText
+        android:id="@+id/contactNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contact Number"
+        android:inputType="phone"
+        android:layout_below="@+id/email_address"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/roomNumber"
+        android:layout_below="@+id/contactNumber">
+        <RadioButton android:id="@+id/oneBed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 bed per room"/>
+        <RadioButton android:id="@+id/twoBed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 bed per room" />
+        <RadioButton android:id="@+id/threeBed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 bed per room" />
+        <RadioButton android:id="@+id/fourBed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 bed per room" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:layout_below="@+id/roomNumber"/>
+
+    <EditText
+        android:id="@+id/hostelName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/submitInquiry"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Submit"
+        android:layout_below="@+id/message"
+        android:id="@+id/submitInquiry"
+        android:onClick="sendInquiryEmail"/>
+
+</RelativeLayout>

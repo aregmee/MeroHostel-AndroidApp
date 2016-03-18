@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MeroHostel</string>
+    <string-array name="gender_array">
+        <item>Boys</item>
+        <item>Girls</item>
+    </string-array>
+    <string name="autocomplete_location_hint">Location&#8230;</string>
+    <string name="main_activity_header">Featured Hostels</string>
+    <string name="search_result">Search Result</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_quick_inquiry">QuickInquiryActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="television">Television</string>
+    <string name="electricity">24 Hour Electricity</string>
+    <string name="wifi">Wifi</string>
+    <string name="title_activity_full_screen_photo">FullScreenPhotoActivity</string>
+</resources>

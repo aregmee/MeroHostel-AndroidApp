@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.HostelDetailActivity"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:id="@+id/hostelImage"
+                android:src="@drawable/ic_hostel_icon"
+                android:adjustViewBounds="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hostel_name"
+                android:text="Hostel Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textIsSelectable="false"
+                android:layout_marginStart="10dp"
+                android:layout_alignTop="@+id/hostelImage"
+                android:layout_toEndOf="@+id/hostelImage" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_location_icon"
+                android:id="@+id/ic_location_icon"
+                android:layout_below="@+id/hostel_name"
+                android:layout_toEndOf="@+id/hostelImage"
+                android:layout_alignStart="@+id/hostel_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hostel_location"
+                android:text="Hostel Location"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_below="@+id/hostel_name"
+                android:layout_toEndOf="@+id/ic_location_icon"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Inquiry"
+                android:id="@+id/inquiry"
+                android:onClick="QuickInquiry"
+                android:layout_below="@+id/hostel_location"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/photos_card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/card_view"
+        android:layout_alignStart="@+id/card_view"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15sp"
+                android:text="Photos"
+                android:id="@+id/photos_text"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="16dp"
+                android:layout_alignStart="@+id/photos_separator"
+                android:layout_alignEnd="@+id/photos_separator" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/photos_separator"
+                android:layout_below="@+id/photos_text"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/photoList"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="15dp"
+                android:layout_below="@+id/photos_separator"
+                android:layout_alignParentStart="true">
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/facilities_card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@+id/photos_card_view"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15sp"
+                android:text="Facilities"
+                android:id="@+id/facility_text"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="16dp"
+                android:layout_alignStart="@+id/facility_separator"
+                android:layout_alignEnd="@+id/facility_separator" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/facility_separator"
+                android:layout_below="@+id/facility_text"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/facilities_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/facility_separator">
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/feeStructure_card_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@+id/facilities_card_view"
+            android:layout_marginTop="20dp"
+            card_view:cardCornerRadius="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15sp"
+                    android:text="Fee Structure"
+                    android:id="@+id/feestructure_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignStart="@+id/fee_separator"
+                    android:layout_alignEnd="@+id/fee_separator" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:id="@+id/fee_separator"
+                    android:layout_below="@+id/feestructure_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignStart="@+id/fee_separator"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/fee_separator"
+                    android:id="@+id/fees">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+package com.merohostel.database;
+
+/**
+ * Created by asimsangram on 2/15/16.
+ */
+public class HostelFeeEntry {
+
+    public static final String TABLE_NAME = "HostelFee";
+
+    public static final String COLUMN_NAME_ID = "id";
+    public static final String COLUMN_NAME_HID = "hid";
+    public static final String COLUMN_NAME_ADMISSION = "adm";
+    public static final String COLUMN_NAME_SEC_DEPOSIT = "security_deposit";
+    public static final String COLUMN_NAME_ONE_BED = "one_bed";
+    public static final String COLUMN_NAME_TWO_BED = "two_bed";
+    public static final String COLUMN_NAME_THREE_BED = "three_bed";
+    public static final String COLUMN_NAME_FOUR_BED = "four_bed";
+}

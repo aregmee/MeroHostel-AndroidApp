@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff4c0e</color>
+    <color name="colorPrimaryDark">#f43f00</color>
+    <color name="colorAccent">#ff4c0e</color>
+    <color name="autocompleteTextColor">#000</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="background_material_light">#eeeeee</color>
+</resources>
